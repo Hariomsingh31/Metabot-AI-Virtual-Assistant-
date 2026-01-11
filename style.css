@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= BODY (CENTER EVERYTHING) ================= */
+body {
+  min-height: 100vh;
+  width: 100vw;
+
+  background-color: black;
+  font-family: Arial, sans-serif;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= MAIN CONTAINER ================= */
+.assistant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  text-align: center;
+}
+
+/* ================= LOGO (BLENDED + CENTERED) ================= */
+#logo {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+
+  /* Blend logo with background */
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.15));
+
+  animation: float 4s ease-in-out infinite;
+}
+
+/* ================= HEADING ================= */
+h1 {
+  font-family: "Protest Guerrilla", cursive;
+  font-size: 2.5rem;
+  color: aliceblue;
+}
+
+#name {
+  color: #ff4d4d;
+  font-size: 3rem;
+}
+
+#va {
+  color: #4d79ff;
+  font-size: 3rem;
+}
+
+/* ================= VOICE WAVE ================= */
+#voice {
+  width: 280px;
+  display: none;
+}
+
+/* ================= BUTTON ================= */
+#btn {
+  background: linear-gradient(to right, #1591cf, #d0ff00);
+  color: white;
+
+  border: none;
+  padding: 15px 25px;
+  font-size: 20px;
+  border-radius: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  cursor: pointer;
+  box-shadow:
+    0 0 15px rgba(21,145,207,0.6),
+    0 0 15px rgba(208,255,0,0.4);
+
+  transition: all 0.3s ease;
+}
+
+#btn:hover {
+  background: linear-gradient(to right, #d0ff00, #1591cf);
+  letter-spacing: 1px;
+  box-shadow:
+    0 0 25px rgba(208,255,0,0.8),
+    0 0 25px rgba(21,145,207,0.8);
+}
+
+/* ================= OUTPUT ================= */
+#output {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+  #logo {
+    width: 140px;
+    height: 140px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #name,
+  #va {
+    font-size: 2.3rem;
+  }
+
+  #btn {
+    font-size: 18px;
+    padding: 12px 20px;
+  }
+}
